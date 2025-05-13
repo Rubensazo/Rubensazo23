@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portafolio - Rubensazo Studios</title>
+  <link rel="stylesheet" href="estilos-comunes.css" />
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      font-family: sans-serif;
+      color: #e0e0ff;
+    }
+
+    .layout {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .top-header {
+      background-color: #000a1a;
+      padding: 15px 20px;
+    }
+
+    .top-header-contenido {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .top-header-logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      text-decoration: none;
+    }
+
+    .top-header-logo img {
+      height: 60px;
+    }
+
+    .titulo-header {
+      font-size: 1.6rem;
+      color: #33aaff;
+      font-weight: bold;
+    }
+
+    .top-header-nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .top-header-nav a {
+      color: #99bbff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .top-header-nav a:hover {
+      color: #33aaff;
+    }
+
+    main {
+      flex: 1;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #33aaff;
+      margin-bottom: 30px;
+    }
+
+    .carrusel-proyectos {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .carrusel-pista {
+      display: flex;
+      gap: 20px;
+      transition: transform 0.5s ease-in-out;
+      scroll-behavior: smooth;
+      overflow-x: auto;
+    }
+
+    .proyecto {
+      flex: 0 0 300px;
+      background-color: #111a2f;
+      border-radius: 12px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 0 15px #0005;
+      transition: transform 0.3s;
+    }
+
+    .proyecto:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px #33aaff55;
+    }
+
+    .proyecto img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .proyecto-texto {
+      padding: 15px;
+    }
+
+    .proyecto h2 {
+      font-size: 1.1rem;
+      color: #33aaff;
+      margin: 0 0 10px;
+    }
+
+    .proyecto p {
+      margin: 0;
+    }
+
+    .carrusel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #33aaff;
+      border: none;
+      color: white;
+      font-size: 2rem;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 1;
+      transition: background-color 0.3s;
+    }
+
+    .carrusel-btn:hover {
+      background-color: #1e90ff;
+    }
+
+    .carrusel-btn.prev {
+      left: 10px;
+    }
+
+    .carrusel-btn.next {
+      right: 10px;
+    }
+
+    footer {
+      background-color: #000a1a;
+      color: #99bbff;
+      padding: 40px 20px;
+    }
+
+    .footer-contenido {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+
+    .footer-logo img {
+      width: 150px;
+      margin-bottom: 10px;
+    }
+
+    .footer-secciones h4,
+    .footer-contacto h4,
+    .footer-redes h4 {
+      color: #33aaff;
+    }
+
+    .footer-secciones ul,
+    .footer-contacto ul,
+    .footer-redes ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-secciones li,
+    .footer-contacto li,
+    .footer-redes li {
+      margin-bottom: 8px;
+    }
+
+    .footer-secciones a,
+    .footer-contacto a,
+    .footer-redes a {
+      color: #99bbff;
+      text-decoration: none;
+    }
+
+    .footer-secciones a:hover,
+    .footer-contacto a:hover,
+    .footer-redes a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <header class="top-header">
+      <div class="top-header-contenido">
+        <a href="index.html" class="top-header-logo">
+          <img src="logo-rubensazo.png" alt="Logo Rubensazo Studios" />
+          <span class="titulo-header">Rubensazo Studios ⚡</span>
+        </a>
+        <nav class="top-header-nav">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="portafolio.html">Portafolio</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <h1>Portafolio de Proyectos</h1>
+      <div class="carrusel-proyectos">
+        <button class="carrusel-btn prev">&#10094;</button>
+        <div class="carrusel-pista">
+          <a href="https://drive.google.com/file/d/1mnyLZxLEqFPE6oZJa4YhRuMBlqYtcyir/view?usp=sharing" target="_blank" class="proyecto">
+            <img src="proyecto1.JPEG" alt="Proyecto 1">
+            <div class="proyecto-texto">
+              <h2>Video Musical</h2>
+              <p>Recreación de video musical.</p>
+            </div>
+          </a>
+          <a href="https://drive.google.com/drive/folders/1V2Do0UXA2OTaHfuy3zKgSga9WiY-A3co?usp=drive_link" target="_blank" class="proyecto">
+            <img src="proyecto2.jpg" alt="Guiones">
+            <div class="proyecto-texto">
+              <h2>Guiones</h2>
+              <p>Guiones realizados para la creación de historias y cortometrajes.</p>
+            </div>
+          </a>
+          <a href="https://drive.google.com/drive/folders/1jvnvw0XGLlK08ugDSRGLSux27gLrTm3j?usp=drive_link" target="_blank" class="proyecto">
+            <img src="proyecto3.jpg" alt="Fotografías">
+            <div class="proyecto-texto">
+              <h2>Fotografías</h2>
+              <p>Muestra de fotografías.</p>
+            </div>
+          </a>
+          <a href="https://drive.google.com/drive/folders/1uRyt2pqrNBuNZBRNNZgSF-59f4ISFjVG?usp=drive_link" target="_blank" class="proyecto">
+            <img src="img servicio-animacion.jpg" alt="Animaciones">
+            <div class="proyecto-texto">
+              <h2>Animaciones</h2>
+              <p>Pequeñas animaciones de prueba.</p>
+            </div>
+          </a>
+          <a href="https://drive.google.com/drive/folders/1H32a3GHg9jkBtNcpT0GLY_qgXCdjP6i1?usp=drive_link" target="_blank" class="proyecto">
+            <img src="proyecto4.jpg" alt="Radio">
+            <div class="proyecto-texto">
+              <h2>Producciones Radio Universidad</h2>
+              <p>Notas y entrevistas para Radio Universidad de Guadalajara.</p>
+            </div>
+          </a>
+          <a href="https://drive.google.com/file/d/1uw2f3962CLlcNKqFKJHZzMFxnWASYD8F/view?usp=drive_link" target="_blank" class="proyecto">
+            <img src="proyecto5.jpg" alt="Doblaje">
+            <div class="proyecto-texto">
+              <h2>Escena de doblaje</h2>
+              <p>Edición y sonorización de escena.</p>
+            </div>
+          </a>
+          <a href="https://drive.google.com/file/d/1jHMltkbV5VFUFoedFwpd7rvMvxh8hEdT/view?usp=drive_link" target="_blank" class="proyecto">
+            <img src="proyecto6.jpg" alt="Diseño">
+            <div class="proyecto-texto">
+              <h2>Diseño</h2>
+              <p>Diseño de auto realista.</p>
+            </div>
+          </a>
+                    <a href="https://classroom.google.com/c/NzE5ODgzNDM4ODc4?cjc=xbx25q7" target="_blank" class="proyecto">
+            <img src="acc1.PNG" alt="Diseño">
+            <div class="proyecto-texto">
+              <h2>Cursos interactivos</h2>
+              <p>Desarrollo de curso interactivo multimedia .</p>
+            </div>
+          </a>
+        </div>
+        <button class="carrusel-btn next">&#10095;</button>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-contenido">
+        <div class="footer-logo">
+          <img src="logo-rubensazo.png" alt="Logo Rubensazo Studios" />
+          <p>&copy; 2025 Rubensazo Studios</p>
+        </div>
+        <div class="footer-secciones">
+          <h4>Secciones</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="portafolio.html">Portafolio</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-contacto">
+          <h4>Contacto</h4>
+          <ul>
+            <li>Email: <a href="mailto:rubenjr23cm@gmail.com">rubenjr23cm@gmail.com</a></li>
+            <li>WhatsApp: <a href="https://wa.me/523222943836" target="_blank">+52 322 294 3836</a></li>
+            <li>Ubicación: Puerto Vallarta, Jalisco, México</li>
+          </ul>
+        </div>
+        <div class="footer-redes">
+          <h4>Redes Sociales</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/rubensazocm/" target="_blank">Instagram</a></li>
+            <li><a href="https://www.youtube.com/@rubensazo23" target="_blank">YouTube</a></li>
+            <li><a href="https://www.tiktok.com/@rubensazocm" target="_blank">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const pista = document.querySelector(".carrusel-pista");
+    const btnPrev = document.querySelector(".carrusel-btn.prev");
+    const btnNext = document.querySelector(".carrusel-btn.next");
+    const paso = 320;
+    let desplazamiento = 0;
+
+    btnNext.addEventListener("click", () => {
+      desplazamiento += paso;
+      pista.scrollTo({ left: desplazamiento, behavior: "smooth" });
+    });
+
+    btnPrev.addEventListener("click", () => {
+      desplazamiento -= paso;
+      if (desplazamiento < 0) desplazamiento = 0;
+      pista.scrollTo({ left: desplazamiento, behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>

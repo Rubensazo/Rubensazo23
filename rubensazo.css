@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #000000;
+  color: #e0e0ff;
+  line-height: 1.6;
+}
+
+/* Header de Navegación */
+.top-header {
+  background-color: #000a1a;
+  padding: 20px 0;
+  border-bottom: 1px solid #1a2947;
+}
+
+.top-header-contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.top-header-logo img {
+  height: 50px;
+}
+
+.top-header-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.top-header-nav ul li a {
+  color: #99bbff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.top-header-nav ul li a:hover {
+  color: #33aaff;
+}
+
+.top-header-redes a {
+  margin-left: 15px;
+  color: #99bbff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.top-header-redes a:hover {
+  color: #33aaff;
+}
+
+/* Hero */
+header.hero {
+  background: url('hero-video.jpg') center/cover no-repeat;
+  padding: 100px 20px;
+  text-align: center;
+  background-color: rgba(0,0,0,0.7);
+  background-blend-mode: overlay;
+}
+
+header.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #33aaff;
+}
+
+.btn {
+  background: #0055ff;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #3388ff;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #33aaff;
+  text-align: center;
+}
+
+#servicios ul, #blog ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+#servicios li, #blog li {
+  background: #111a2f;
+  padding: 20px;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+#servicios li:hover, #blog li:hover {
+  background: #1a2947;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.proyecto {
+  background: #0a0f1a;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.proyecto:hover {
+  transform: translateY(-5px);
+}
+
+.proyecto img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.proyecto h3 {
+  margin: 15px;
+  color: #33aaff;
+}
+
+.proyecto p, .proyecto a {
+  margin: 0 15px 15px;
+  display: block;
+  color: #c2d6ff;
+  text-decoration: none;
+}
+
+.proyecto a:hover {
+  text-decoration: underline;
+}
+
+form {
+  display: grid;
+  gap: 15px;
+}
+
+form input, form textarea, form button {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+
+form input, form textarea {
+  background: #111a2f;
+  color: #e0e0ff;
+}
+
+form button {
+  background: #0055ff;
+  color: white;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #3388ff;
+}
+
+footer {
+  background: #000a1a;
+  padding: 40px 20px;
+  color: #99bbff;
+}
+
+.footer-contenido {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: left;
+}
+
+.footer-logo img {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.footer-seccion h4 {
+  margin-bottom: 10px;
+  color: #33aaff;
+}
+
+.footer-seccion ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-seccion ul li {
+  margin-bottom: 8px;
+}
+
+.footer-seccion ul li a {
+  color: #99bbff;
+  text-decoration: none;
+}
+
+.footer-seccion ul li a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .top-header-contenido {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .top-header-nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .top-header-redes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  header.hero h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}

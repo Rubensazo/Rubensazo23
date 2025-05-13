@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto - Rubensazo Studios</title>
+  <link rel="stylesheet" href="estilos-comunes.css">
+  <style>
+    .top-header-logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      text-decoration: none;
+    }
+
+    .top-header-logo img {
+      height: 60px;
+    }
+
+    .titulo-header {
+      font-size: 1.6rem;
+      color: #33aaff;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #33aaff;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    button {
+      padding: 12px;
+      background-color: #33aaff;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #1e90ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <!-- HEADER -->
+    <header class="top-header">
+      <div class="top-header-contenido">
+        <a href="index.html" class="top-header-logo">
+          <img src="logo-rubensazo.png" alt="Logo Rubensazo Studios">
+          <span class="titulo-header">Rubensazo Studios ⚡</span>
+        </a>
+        <nav class="top-header-nav">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="portafolio.html">Portafolio</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <h1>Contáctanos</h1>
+      <form>
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu correo" required>
+        <input type="text" name="proyecto" placeholder="Tipo de proyecto">
+        <textarea name="mensaje" placeholder="Tu mensaje"></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-contenido">
+        <div class="footer-logo">
+          <img src="logo-rubensazo.png" alt="Logo Rubensazo Studios">
+          <p>&copy; 2025 Rubensazo Studios</p>
+        </div>
+        <div class="footer-secciones">
+          <h4>Secciones</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="portafolio.html">Portafolio</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-contacto">
+          <h4>Contacto</h4>
+          <ul>
+            <li>Email: <a href="mailto:rubenjr23cm@gmail.com">rubenjr23cm@gmail.com</a></li>
+            <li>WhatsApp: <a href="https://wa.me/523222943836" target="_blank">+52 322 294 3836</a></li>
+            <li>Ubicación: Puerto Vallarta, Jalisco, México</li>
+          </ul>
+        </div>
+        <div class="footer-redes">
+          <h4>Redes Sociales</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/rubensazocm/" target="_blank">Instagram</a></li>
+            <li><a href="https://www.youtube.com/@rubensazo23" target="_blank">YouTube</a></li>
+            <li><a href="https://www.tiktok.com/@rubensazocm" target="_blank">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
